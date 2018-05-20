@@ -11,20 +11,21 @@ import { IonicStorageModule } from '@ionic/storage';
 import { HttpModule } from '@angular/http';
 
 import { AngularFireModule } from 'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AuthProvider } from '../providers/auth/auth';
 import { DataProvider } from '../providers/data/data';
 import { FunctionsProvider } from '../providers/functions/functions';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDcbsUEReGm_dlijVXC1sMCcqKpCsXt0nQ',
-  authDomain: 'ionic2-angularfire-login-14ea3.firebaseapp.com',
-  databaseURL: 'https://ionic2-angularfire-login-14ea3.firebaseio.com',
-  projectId: 'ionic2-angularfire-login-14ea3',
-  storageBucket: 'ionic2-angularfire-login-14ea3.appspot.com',
-  messagingSenderId: '438127821589'
+  apiKey: 'AIzaSyDiefO8-tolzxMVp-WQE32w5ePFQ4CSmho',
+  authDomain: 'tyreexpress-d3dde.firebaseapp.com',
+  databaseURL: 'https://tyreexpress-d3dde.firebaseio.com',
+  projectId: 'tyreexpress-d3dde',
+  storageBucket: '',
+  messagingSenderId: '660971527421'
 };
 
 @NgModule({
@@ -51,6 +52,8 @@ const firebaseConfig = {
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
     DataProvider,
+    AngularFireAuth,
+    AngularFireDatabase,
     FunctionsProvider,
     FunctionsProvider
   ]

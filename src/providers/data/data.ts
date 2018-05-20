@@ -1,6 +1,15 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable, 
-  FirebaseObjectObservable } from 'angularfire2/database';
+// import { AngularFireDatabase, AngularFireList ,
+//  } from 'angularfire2/database';
+// import { AngularFirebase, AngularFireList ,
+//  } from 'angularfire2/database';
+// // tslint:disable-next-line:max-line-length
+// tslint:disable-next-line:max-line-length
+// import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
+import { AngularFireAuth } from 'angularfire2/auth';
+
+// tslint:disable-next-line:max-line-length
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()

@@ -6,29 +6,29 @@
         <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+        <ion-input type="password" placeholder="password" formControlName="password"></ion-input>
       </ion-item>
       <button ion-button block outline color="primary" class="signin-button" 
         type="submit" [disabled]="!form.valid"
       >
-        Entrar
+      Log in
       </button>
     </form>
-    <p class="forgot-password" (click)="navigateTo('auth-password')">Esqueceu a senha?</p>
+    <p class="forgot-password" (click)="navigateTo('auth-password')">Forgot password?</p>
     <p ion-text color="danger" *ngIf="hasError">{{errorMessage}}</p>
   </div>
   <div class="strike">
-    <span>OU</span>
+    <span>OR</span>
   </div>
   <button ion-button block clear (click)="signInWithFacebook()" color="light" class="facebook-button">
-    <ion-icon name="logo-facebook"></ion-icon> Entrar com Facebook
+    <ion-icon name="logo-facebook"></ion-icon> Sign in with Facebook
   </button>
 </ion-content>
 
 <ion-footer>
   <ion-toolbar class="footer">
     <div (click)="navigateTo('auth-signup')">
-      <span>Não tem uma conta? <strong>Cadastre-se</strong>.</span>
+      <span>Do not have an account? <strong>Register</strong>.</span>
     </div>
   </ion-toolbar>
 </ion-footer>

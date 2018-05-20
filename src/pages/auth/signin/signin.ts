@@ -16,10 +16,10 @@ export class Signin {
   form : FormGroup;
   hasError: boolean;
   errorMessage: string;
-  
+
   constructor(
     private app: App,
-    private navCtrl: NavController, 
+    private navCtrl: NavController,
     private loadingCtrl: LoadingController,
     private modalCtrl: ModalController,
     private formBuilder: FormBuilder,
@@ -34,7 +34,7 @@ export class Signin {
 
   signInWithEmail() {
     const loading = this.loadingCtrl.create({
-      content: 'Por favor, aguarde...'
+      content: 'Please wait...'
     });
     loading.present();
 
@@ -46,13 +46,13 @@ export class Signin {
       loading.dismiss();
       switch (error.code) {
         case 'auth/invalid-email':
-          this.errorMessage = 'Insira um email válido.';
+          this.errorMessage = 'Please enter a valid email address.';
           break;
         case 'auth/wrong-password':
-          this.errorMessage = 'Combinação de usuário e senha incorreta.';
+          this.errorMessage = 'Incorrect username and password combination.';
           break;
         case 'auth/user-not-found':
-          this.errorMessage = 'Combinação de usuário e senha incorreta.';
+          this.errorMessage = 'Incorrect username and password combination.';
           break;
         default:
           this.errorMessage = error;
